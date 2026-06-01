@@ -22,6 +22,12 @@
     margin-bottom: 12px;
     width: fit-content;
 
+    @include respond ('phone') {
+        margin-bottom: 8px;
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
     &--white {
         color: $white;
         background: linear-gradient(180deg, rgba($white, 0.06), rgba($white, 0.16));
@@ -46,10 +52,20 @@
     color: $dark;
     margin-bottom: 16px;
 
-    &.text-white { color: $white; }
+    &.text-white {
+        color: $white;
+    }
 
-    @include respond("tab-land") { font-size: 36px; line-height: 1.2; }
-    @include respond("tab-port") { font-size: 28px; line-height: 1.2; }
+    @include respond("tab-land") {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    @include respond("tab-port") {
+        font-size: 34px;
+        line-height: 44px;
+        margin-bottom: 24px;
+    }
 }
 
 .section-desc {
@@ -60,7 +76,11 @@
     font-weight: 400;
     margin-bottom: 0;
 
-    @include respond("tab-port") { font-size: 18px; line-height: 28px; }
+    @include respond("tab-port") {
+        font-size: 16px;
+        line-height: 24px;
+        // margin-bottom: 40px;
+    }
 }
 
 // ---- Shared card atoms ----
@@ -75,7 +95,11 @@
     flex-shrink: 0;
     margin-bottom: 24px;
 
-    img { width: 34px; height: 34px; object-fit: contain; }
+    img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+    }
 }
 
 .service-link {
@@ -88,9 +112,14 @@
     font-family: "Poppins", sans-serif;
     @include transitionFast;
 
-    img { width: 18px; height: 18px; }
+    img {
+        width: 18px;
+        height: 18px;
+    }
 
-    &:hover { color: $primary; }
+    &:hover {
+        color: $primary;
+    }
 }
 
 .service-card {
@@ -104,6 +133,7 @@
     gap: 0;
     flex: 1;
     min-width: 0;
+    height: 100%;
 
     .service-card-body {
         flex: 1;
@@ -149,7 +179,10 @@
     cursor: pointer;
     @include transitionFast;
 
-    img { width: 24px; height: 24px; }
+    img {
+        width: 24px;
+        height: 24px;
+    }
 
     &:hover {
         border-color: $primary;
@@ -202,7 +235,9 @@
         height: 320px;
         overflow: hidden;
 
-        @include respond("phone") { height: 220px; }
+        @include respond("phone") {
+            height: 220px;
+        }
 
         img {
             width: 100%;
@@ -217,6 +252,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @include respond("phone") {
+            padding: 16px;
+        }
     }
 
     .listing-body-lower {
@@ -231,6 +270,11 @@
         font-size: 28px;
         line-height: 32px;
         color: $dark;
+
+        @include respond("phone") {
+            font-size: 22px;
+            line-height: 24px;
+        }
     }
 
     .listing-name {
@@ -242,6 +286,11 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @include respond("phone") {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     .listing-desc {
@@ -249,6 +298,12 @@
         line-height: 24px;
         color: #929DAA;
         font-weight: 400;
+
+        @include respond("phone") {
+
+            font-size: 14px;
+            line-height: 22px;
+        }
     }
 
     .listing-meta {
@@ -256,6 +311,10 @@
         flex-wrap: wrap;
         gap: 16px;
         align-items: center;
+
+        @include respond("phone") {
+            gap: 12px;
+        }
     }
 
     .listing-meta-item {
@@ -268,13 +327,19 @@
         font-weight: 400;
         white-space: nowrap;
 
-        img { width: 16px; height: 16px; }
+        img {
+            width: 16px;
+            height: 16px;
+        }
     }
 
     &--sold {
         .listing-img {
             position: relative;
-            img { filter: grayscale(100%); }
+
+            img {
+                filter: grayscale(100%);
+            }
         }
     }
 }
@@ -319,7 +384,10 @@
         width: 100%;
         line-height: 0;
 
-        img { width: 100%; display: block; }
+        img {
+            width: 100%;
+            display: block;
+        }
     }
 
     .cta-inner {
@@ -357,14 +425,79 @@
         border: 1px solid rgba($dark, 0.08);
         box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
 
-        img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-        @include respond("tab-port") { display: none; }
 
-        &--tl { width: 82px;  height: 82px;  top: 56px;    left: 160px;   }
-        &--bl { width: 197px; height: 197px; bottom: 64px;  left: 64px;    }
-        &--tr { width: 180px; height: 180px; top: 40px;    right: 140px;  }
-        &--br { width: 131px; height: 131px; bottom: 72px;  right: 152px;  }
+
+        &--tl {
+            width: 82px;
+            height: 82px;
+            top: 56px;
+            left: 160px;
+
+            @include respond("tab-port") {
+                width: 71px;
+                height: 71px;
+                border-radius: 10px;
+                top: 18px;
+                left: 245px;
+
+            }
+        }
+
+        &--bl {
+            width: 197px;
+            height: 197px;
+            bottom: 64px;
+            left: 64px;
+
+            @include respond("tab-port") {
+                width: 79px;
+                height: 79px;
+                border-radius: 10px;
+                bottom: 14px;
+                left: 32px;
+
+            }
+        }
+
+        &--tr {
+            width: 180px;
+            height: 180px;
+            top: 40px;
+            right: 140px;
+
+            @include respond("tab-port") {
+                width: 33px;
+                height: 33px;
+                top: 52px;
+                left: 39px;
+                border-radius: 10px;
+
+
+            }
+        }
+
+        &--br {
+            width: 131px;
+            height: 131px;
+            bottom: 72px;
+            right: 152px;
+
+            @include respond("tab-port") {
+
+                width: 53px;
+                height: 53px;
+                bottom: 44px;
+                right: 33px;
+                border-radius: 10px;
+            }
+        }
     }
 
     .cta-content {
@@ -381,8 +514,14 @@
         line-height: 1.1;
         margin-bottom: 24px;
 
-        @include respond("tab-land") { font-size: 48px; }
-        @include respond("tab-port") { font-size: 36px; }
+        @include respond("tab-land") {
+            font-size: 48px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
     }
 
     .cta-sub {
@@ -391,6 +530,11 @@
         color: rgba($white, 0.8);
         font-weight: 400;
         margin-bottom: 32px;
+
+        @include respond("tab-port") {
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
     }
 
     .cta-btn {
@@ -405,9 +549,15 @@
         border-radius: $radius;
         @include transitionMedium;
 
-        img { width: 16px; height: 16px; }
+        img {
+            width: 16px;
+            height: 16px;
+        }
 
-        &:hover { background: rgba($white, 0.9); color: $primary; }
+        &:hover {
+            background: rgba($white, 0.9);
+            color: $primary;
+        }
     }
 
     .cta-actions {
@@ -431,7 +581,11 @@
         border-radius: $radius;
         @include transitionMedium;
 
-        img { width: 16px; height: 16px; filter: brightness(0) invert(1); }
+        img {
+            width: 16px;
+            height: 16px;
+            filter: brightness(0) invert(1);
+        }
 
         &:hover {
             background: rgba($white, 0.12);

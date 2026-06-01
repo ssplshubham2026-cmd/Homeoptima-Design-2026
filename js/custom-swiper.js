@@ -186,14 +186,16 @@ const featuredSwiper = new Swiper('.featured-swiper', {
         prevEl: '#listingsPrev',
     },
     breakpoints: {
-        576: {
-            slidesPerView: 1.5,
+        360: {
+            slidesPerView: 1.1,
+             spaceBetween: 12,
         },
         768: {
             slidesPerView: 2.2,
         },
         1200: {
             slidesPerView: 3.2,
+              spaceBetween: 24,
         },
     },
     on: {
@@ -213,13 +215,15 @@ const citiesSwiper = new Swiper('.cities-swiper', {
     slidesPerGroup: 1,
     loop: true,
     grabCursor: true,
+  
     navigation: {
         nextEl: '#citiesNext',
         prevEl: '#citiesPrev',
     },
     breakpoints: {
-        576: {
-            slidesPerView: 1.5,
+        360: {
+            slidesPerView: 1.2,
+              centeredSlides: true,
         },
         768: {
             slidesPerView: 2.2,
@@ -261,6 +265,79 @@ const testimonialsSwiper = new Swiper('.testimonials-swiper', {
         },
         1200: {
             slidesPerView: 2.3,
+        },
+    },
+});
+
+// testimonial-swiper-1
+
+const testimonialsSwiperTwo = new Swiper('.testimonial-swiper-2', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+  loop: true,
+  
+   navigation: {
+        nextEl: ".next-btn-1",
+        prevEl: ".prev-btn-1",
+    },
+    pagination: {
+        el: ".custom-dots-1",
+        clickable: true,
+
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+        },
+    },
+    breakpoints: {
+        360: {
+            slidesPerView: 1.1,
+              spaceBetween: 16,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        },
+    },
+});
+
+
+// testimonial-swiper-2
+
+const testimonialsSwiperThree = new Swiper('.testimonial-swiper-3', {
+    slidesPerView: 3,
+    spaceBetween: 24,
+  loop: true,
+  
+   navigation: {
+        nextEl: ".next-btn-2",
+        prevEl: ".prev-btn-2",
+    },
+    pagination: {
+        el: ".custom-dots-2",
+        clickable: true,
+
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+        },
+    },
+    breakpoints: {
+        360: {
+            slidesPerView: 1.1,
+              spaceBetween: 16,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 3,
         },
     },
 });

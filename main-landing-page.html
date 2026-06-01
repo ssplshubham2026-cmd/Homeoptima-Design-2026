@@ -51,13 +51,31 @@
     <div class="main-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
+                <div class="container-fluid px-0">
                     <a class="navbar-brand" href="#">Logo</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="javascript:void(0);" class="d-block d-lg-none">
+                            <svg width="24" height="24" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 19L23.0002 23.0002" stroke="#0E171F" stroke-width="2"
+                                    stroke-linecap="square" stroke-linejoin="round" />
+                                <path
+                                    d="M21.001 13.0005C21.001 8.58194 17.4191 5 13.0005 5C8.58194 5 5 8.58194 5 13.0005C5 17.4191 8.58194 21.001 13.0005 21.001C17.4191 21.001 21.001 17.4191 21.001 13.0005Z"
+                                    stroke="#0E171F" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <svg width="21" height="14" viewBox="0 0 21 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 14V11.6667H21V14H0ZM0 8.16667V5.83333H21V8.16667H0ZM0 2.33333V0H21V2.33333H0Z"
+                                    fill="#0E171F" />
+                            </svg>
+                        </button>
+
+                    </div>
                     <div class="collapse navbar-collapse" id="navbarScroll">
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
                             style="--bs-scroll-height: 100px;">
@@ -81,15 +99,16 @@
                             </li>
                         </ul>
 
-                    </div>
-                    <!-- extra-nav -->
-                    <div class="extra-nav">
-                        <a href="javascript:void(0);" class="btn btn-outline-primary me-3">Sign in <img
-                                src="images/icons/chevron-right.svg" alt="">
-                        </a>
-                        <a href="javascript:void(0);" class="btn btn-primary">My properties <img
-                                src="images/icons/chevron-right-white.svg" alt="">
-                        </a>
+                        <!-- extra-nav -->
+                        <div class="extra-nav ms-auto">
+                            <a href="javascript:void(0);" class="btn btn-outline-primary me-lg-3 mb-lg-0 mb-3">Sign in
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </a>
+                            <a href="javascript:void(0);"
+                                class="btn btn-primary d-xl-inline-block  d-lg-none d-inline-block">My properties <img
+                                    src="images/icons/chevron-right-white.svg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -132,6 +151,7 @@
 
     <!-- ===================== 2. STATS BAR ===================== -->
     <section class="stats-bar">
+
         <div class="container">
             <div class="row g-4 g-lg-0 stats-bar-row">
                 <div class="col-6 col-lg stat-item">
@@ -156,8 +176,35 @@
 
     <!-- ===================== 3. WHAT WE DO ===================== -->
     <section class="what-we-do-section">
-        <div class="wwd-bg-wave">
-            <img src="images/bg-wave.svg" alt="">
+
+        <div class="three-line-shape">
+            <img class="d-md-block d-none" src="images/right-3-line.png" alt="Decorative three lines shape1">
+
+            <svg class="d-md-none d-block" width="100%" height="351" viewBox="0 0 393 351" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.24" filter="">
+                    <path
+                        d="M725.451 268.063C674.878 268.063 621.963 254.359 568.056 227.289C541.666 214.036 517.151 198.849 493.443 184.161C475.094 172.796 456.123 161.043 436.419 150.273C381.469 120.239 330.243 104.193 279.82 101.219C211.976 97.2101 148.178 117.023 86.5058 136.177C33.7512 152.563 -20.8006 169.507 -78.8287 172.245C-167.41 176.442 -249.942 147.546 -318.996 118.743C-330.212 114.065 -341.584 109.201 -352.584 104.497C-412.622 78.8192 -474.703 52.2682 -544.988 41.1901C-625.219 28.5408 -728.149 41.7186 -769.647 91.3626L-772.141 90.4961C-729.957 40.0356 -625.612 26.6037 -544.313 39.4163C-473.55 50.5709 -411.258 77.2121 -351.019 102.975C-340.025 107.676 -328.657 112.538 -317.459 117.209C-248.799 145.848 -166.813 174.561 -79.0326 170.424C-21.5441 167.711 32.759 150.844 85.2758 134.532C147.296 115.268 211.415 95.3567 280.08 99.3999C331.101 102.41 382.84 118.595 438.25 148.881C458.02 159.687 477.024 171.46 495.403 182.845C519.058 197.5 543.521 212.653 569.797 225.848C625.284 253.712 679.659 267.271 731.307 266.174C785.292 265.018 849.038 242.348 860.845 202.608L863.626 202.952C851.543 243.622 786.481 266.82 731.401 267.998C729.422 268.041 727.436 268.063 725.451 268.063Z"
+                        fill="#05BAFF" />
+                    <path
+                        d="M-421.263 197.259C-436.755 197.259 -452.353 196.514 -467.976 194.881C-511.421 190.337 -552.825 179.149 -592.865 168.329C-600.121 166.369 -607.374 164.41 -614.629 162.49C-661.779 150.019 -712.479 138.669 -763.86 140.063C-820.447 141.602 -869.853 160.316 -889.731 187.741L-892.297 186.968C-871.976 158.933 -821.608 139.805 -763.981 138.239C-712.087 136.832 -661.005 148.249 -613.556 160.801C-606.289 162.722 -599.034 164.683 -591.773 166.646C-551.882 177.424 -510.635 188.568 -467.522 193.078C-357.21 204.618 -247.329 171.339 -174.281 145.303C-152.399 137.505 -130.378 129.166 -109.079 121.102C-42.4793 95.885 26.3874 69.8097 101.683 56.1047C220.78 34.4267 355.253 45.976 461.387 86.9969C488.446 97.4554 514.098 109.857 538.901 121.85C556.876 130.54 575.46 139.526 594.423 147.697C649.265 171.321 698.287 183.12 744.284 183.766C802.433 184.593 856.714 164.667 876.437 135.34L879.036 136.065C858.868 166.057 803.37 186.381 744.223 185.592C697.667 184.937 648.153 173.038 592.852 149.214C573.823 141.017 555.206 132.016 537.203 123.311C512.455 111.346 486.864 98.9728 459.932 88.5625C354.451 47.7966 220.813 36.3175 102.451 57.861C27.5071 71.5034 -41.1994 97.5181 -107.647 122.676C-128.96 130.746 -150.997 139.09 -172.91 146.901C-236.012 169.392 -326.49 197.257 -421.263 197.259Z"
+                        fill="#B5F6FF" />
+                    <path
+                        d="M-168.757 324.831C-197.558 324.832 -225.001 321.401 -250.056 314.397C-317.468 295.551 -361.347 253.794 -395.374 215.431C-400.534 209.616 -405.624 203.742 -410.722 197.856C-440.275 163.747 -470.835 128.477 -517.114 103.064C-593.922 60.8859 -709.985 52.5018 -799.366 82.6754L-800.68 81.0584C-710.3 50.5467 -592.94 59.0273 -515.278 101.673C-468.612 127.3 -437.925 162.716 -408.251 196.966C-403.157 202.846 -398.069 208.715 -392.919 214.526C-359.119 252.627 -315.582 294.089 -248.928 312.723C-170.632 334.609 -68.3885 321.107 24.5563 276.594C65.8 256.841 103.037 233.101 139.049 210.142C171.677 189.341 205.413 167.832 242.106 149.292C286.145 127.038 401.02 78.0378 516.292 103.621C556.411 112.524 590.927 129.55 624.307 146.015L628.601 148.131C664.823 165.976 700.761 182.585 742.101 189.738C788.914 197.836 836.302 190.769 862.807 171.729L864.915 172.948C837.704 192.494 789.216 199.78 741.366 191.501C699.528 184.262 663.339 167.542 626.881 149.583L622.587 147.466C589.387 131.089 555.054 114.154 515.369 105.347C401.429 80.0584 287.531 128.66 243.854 150.729C207.288 169.205 173.61 190.677 141.04 211.44C104.959 234.444 67.6495 258.23 26.243 278.059C-37.8781 308.768 -106.466 324.829 -168.757 324.831Z"
+                        fill="#0096F9" />
+                    <path
+                        d="M36.3763 293.646C-91.9474 293.65 -202.29 233.043 -274.959 186.752C-287.728 178.618 -300.657 170.174 -313.161 162.008C-388.103 113.065 -465.596 62.4553 -565.91 39.8111C-681.697 13.6745 -816.032 30.5516 -908.131 82.8153L-910 81.4445C-864.758 55.7705 -808.182 38.0944 -746.386 30.3299C-684.598 22.5645 -621.861 25.2474 -564.975 38.0885C-464.042 60.8727 -386.313 111.634 -311.145 160.726C-298.647 168.888 -285.726 177.328 -272.968 185.454C-198.3 233.018 -83.688 295.778 48.8997 291.626C116.644 289.508 185.809 270.472 266.571 231.72C288.388 221.252 309.936 210.014 330.776 199.146C371.5 177.91 413.612 155.951 459.658 138.715C506.678 121.117 599.314 94.2646 691.476 112.193C746.434 122.883 792.533 148.056 833.208 170.265L911 212.746L909.169 214.139L831.376 171.657C790.913 149.564 745.051 124.52 690.657 113.94C599.521 96.2114 507.704 122.843 461.079 140.294C415.221 157.459 373.197 179.373 332.556 200.565C311.694 211.444 290.124 222.694 268.263 233.183C187.029 272.163 117.368 291.313 49.038 293.449C44.8015 293.581 40.5762 293.646 36.3763 293.646Z"
+                        fill="#75E2FF" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_1004_2333" x="-935.986" y="-0.000114441" width="1872.97" height="350.818"
+                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="12.9932" result="effect1_foregroundBlur_1004_2333" />
+                    </filter>
+                </defs>
+            </svg>
+
         </div>
         <div class="container">
             <div class="row">
@@ -165,66 +212,101 @@
                     <div class="section-header">
                         <span class="section-badge">What we do</span>
                         <h2 class="section-title">Everything you need,<br>in one place.</h2>
-                        <p class="section-desc">From your first search to final closing â€” and everything in between â€” we
+                        <p class="section-desc">From your first search to final closing â€” and everything in between
+                            â€” we
                             guide you every step of the way.</p>
                     </div>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrap" style="background: rgba(46, 124, 246, 0.12);">
-                            <img src="images/icons/buy.svg" alt="">
+            <div class="swiper testimonial-swiper-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon-wrap" style="background: rgba(46, 124, 246, 0.12);">
+                                <img src="images/icons/buy.svg" alt="">
+                            </div>
+                            <div class="service-card-body">
+                                <h5 class="service-title">Buy a home</h5>
+                                <p class="service-desc">Search active listings, off-market opportunities, and
+                                    pre-construction.</p>
+                            </div>
+                            <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
+                                    alt=""></a>
                         </div>
-                        <div class="service-card-body">
-                            <h5 class="service-title">Buy a home</h5>
-                            <p class="service-desc">Search active listings, off-market opportunities, and
-                                pre-construction.</p>
-                        </div>
-                        <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
-                                alt=""></a>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrap" style="background: rgba(233, 189, 95, 0.12);">
-                            <img src="images/icons/sell.svg" alt="">
+                    <!-- second-slide-start -->
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon-wrap" style="background: rgba(233, 189, 95, 0.12);">
+                                <img src="images/icons/sell.svg" alt="">
+                            </div>
+                            <div class="service-card-body">
+                                <h5 class="service-title">Sell a home</h5>
+                                <p class="service-desc">Strategic pricing, premium marketing, and concierge service.</p>
+                            </div>
+                            <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
+                                    alt=""></a>
                         </div>
-                        <div class="service-card-body">
-                            <h5 class="service-title">Sell a home</h5>
-                            <p class="service-desc">Strategic pricing, premium marketing, and concierge service.</p>
-                        </div>
-                        <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
-                                alt=""></a>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrap" style="background: rgba(141, 235, 146, 0.12);">
-                            <img src="images/icons/chart.svg" alt="">
+                    <!-- third-slide-start -->
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon-wrap" style="background: rgba(141, 235, 146, 0.12);">
+                                <img src="images/icons/chart.svg" alt="">
+                            </div>
+                            <div class="service-card-body">
+                                <h5 class="service-title">Home valuation</h5>
+                                <p class="service-desc">Get an instant, data-driven estimate of your home's value.</p>
+                            </div>
+                            <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
+                                    alt=""></a>
                         </div>
-                        <div class="service-card-body">
-                            <h5 class="service-title">Home valuation</h5>
-                            <p class="service-desc">Get an instant, data-driven estimate of your home's value.</p>
-                        </div>
-                        <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
-                                alt=""></a>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon-wrap" style="background: rgba(255, 130, 118, 0.12);">
-                            <img src="images/icons/cursor-box.svg" alt="">
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="service-icon-wrap" style="background: rgba(255, 130, 118, 0.12);">
+                                <img src="images/icons/cursor-box.svg" alt="">
+                            </div>
+                            <div class="service-card-body">
+                                <h5 class="service-title">First-time buyer</h5>
+                                <p class="service-desc">Programs, incentives, and a step-by-step buying playbook.</p>
+                            </div>
+                            <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
+                                    alt=""></a>
                         </div>
-                        <div class="service-card-body">
-                            <h5 class="service-title">First-time buyer</h5>
-                            <p class="service-desc">Programs, incentives, and a step-by-step buying playbook.</p>
-                        </div>
-                        <a href="#" class="service-link">Learn more <img src="images/icons/chevron-right.svg"
-                                alt=""></a>
                     </div>
+
                 </div>
+
+
             </div>
+            <div class="testimonial-controls-1">
+                <button class="nav-btn-1 prev-btn-1" type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+
+                <div class="custom-dots-1">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <button class="nav-btn-1 next-btn-1" type="button">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 12.75L6.75 6.75L0.75 0.75" stroke="#2C6EFE" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+            </div>
+
+        </div>
+
         </div>
     </section>
 
@@ -238,8 +320,9 @@
                     <p class="section-desc">From your first search to final closing â€” and everything in between â€” we
                         guide you every step of the way.</p>
                 </div>
-                <div class="col-auto ms-auto">
-                    <a href="#" class="btn btn-primary d-flex align-items-center gap-2">
+                <div class="col-lg-auto col-sm-4 ms-auto">
+                    <a href="#"
+                        class="btn btn-primary justify-content-md-start justify-content-center  d-flex align-items-center gap-2">
                         View all listings <img src="images/icons/chevron-right-white.svg" alt="">
                     </a>
                 </div>
@@ -382,12 +465,45 @@
 
     <!-- ===================== 5. WHY CHOOSE US ===================== -->
     <section class="why-us-section">
-        <div class="why-us-wave">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1680" height="100" viewBox="0 0 1680 100" fill="none">
-                <path
-                    d="M0.554205 99.9953C0.268334 100.002 0.0831069 100.002 0 99.9953H0.554205C30.0228 99.3574 1128.95 33.2786 1680 0V99.9953H0.554205Z"
-                    fill="#2C6EFE" />
+        <div class="wave-how">
+
+            <svg class="d-none d-lg-block" width="1680" height="460" viewBox="0 0 1680 460" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.24">
+                    <path
+                        d="M1956.38 372.619C1878.54 372.619 1797.09 351.525 1714.11 309.857C1673.49 289.457 1635.76 266.081 1599.26 243.473C1571.02 225.978 1541.82 207.887 1511.49 191.31C1426.91 145.079 1348.06 120.381 1270.44 115.802C1166.01 109.632 1067.81 140.129 972.879 169.613C891.676 194.835 807.706 220.915 718.386 225.13C582.035 231.591 454.998 187.112 348.704 142.777C331.44 135.576 313.935 128.089 297.004 120.849C204.589 81.3236 109.03 40.4546 0.84314 23.4023C-122.654 3.93172 -281.09 24.2158 -344.966 100.631L-348.805 99.2973C-283.873 21.6254 -123.258 0.950143 1.88187 20.6721C110.806 37.8419 206.689 78.8497 299.413 118.506C316.336 125.742 333.833 133.225 351.071 140.416C456.756 184.499 582.955 228.695 718.072 222.328C806.562 218.151 890.149 192.188 970.986 167.081C1066.45 137.428 1165.15 106.779 1270.84 113.003C1349.38 117.636 1429.02 142.548 1514.31 189.167C1544.74 205.8 1573.99 223.922 1602.28 241.447C1638.69 264.004 1676.35 287.329 1716.79 307.639C1802.2 350.53 1885.9 371.4 1965.4 369.712C2048.5 367.933 2146.62 333.037 2164.79 271.867L2169.07 272.397C2150.47 334.998 2050.33 370.706 1965.54 372.52C1962.5 372.586 1959.44 372.619 1956.38 372.619Z"
+                        fill="#05BAFF"></path>
+                    <path
+                        d="M191.296 263.635C167.449 263.635 143.439 262.49 119.392 259.975C52.5187 252.98 -11.2128 235.759 -72.8458 219.105C-84.0141 216.088 -95.1785 213.073 -106.346 210.117C-178.922 190.921 -256.963 173.451 -336.051 175.596C-423.154 177.964 -499.202 206.771 -529.8 248.986L-533.75 247.795C-502.471 204.643 -424.941 175.199 -336.238 172.788C-256.359 170.622 -177.731 188.196 -104.694 207.518C-93.5089 210.475 -82.3414 213.493 -71.1645 216.514C-9.7608 233.104 53.7281 250.258 120.091 257.2C289.89 274.964 459.026 223.738 571.465 183.662C605.149 171.658 639.045 158.822 671.83 146.409C774.344 107.594 880.348 67.4576 996.248 46.362C1179.57 12.9938 1386.56 30.7712 1549.93 93.9133C1591.58 110.012 1631.06 129.101 1669.24 147.562C1696.91 160.938 1725.52 174.77 1754.7 187.346C1839.12 223.711 1914.58 241.871 1985.38 242.866C2074.89 244.139 2158.44 213.469 2188.8 168.326L2192.8 169.442C2161.75 215.608 2076.33 246.892 1985.29 245.677C1913.62 244.669 1837.41 226.354 1752.29 189.682C1723 177.064 1694.34 163.209 1666.63 149.81C1628.53 131.393 1589.14 112.347 1547.69 96.3231C1385.32 33.5737 1179.62 15.9042 997.43 49.0655C882.071 70.0647 776.314 110.108 674.034 148.833C641.227 161.254 607.306 174.099 573.576 186.121C476.446 220.741 337.176 263.632 191.296 263.635Z"
+                        fill="#B5F6FF"></path>
+                    <path
+                        d="M579.969 460.001C535.636 460.003 493.395 454.722 454.829 443.94C351.064 414.933 283.523 350.658 231.146 291.607C223.204 282.656 215.368 273.614 207.521 264.554C162.031 212.051 114.992 157.76 43.7566 118.643C-74.4717 53.7204 -253.124 40.8151 -390.705 87.2602L-392.727 84.7712C-253.609 37.8057 -72.9602 50.8595 46.5823 116.503C118.413 155.949 165.648 210.463 211.326 263.183C219.166 272.235 226.997 281.268 234.925 290.213C286.953 348.86 353.966 412.682 456.565 441.364C577.083 475.053 734.463 454.269 877.53 385.752C941.015 355.347 998.332 318.805 1053.76 283.465C1103.99 251.447 1155.92 218.339 1212.4 189.801C1280.18 155.546 1457.01 80.1217 1634.44 119.501C1696.19 133.205 1749.32 159.413 1800.7 184.757L1807.31 188.014C1863.07 215.481 1918.39 241.048 1982.02 252.058C2054.08 264.522 2127.02 253.645 2167.82 224.337L2171.06 226.213C2129.18 256.3 2054.54 267.515 1980.89 254.772C1916.49 243.629 1860.78 217.892 1804.67 190.248L1798.06 186.99C1746.95 161.781 1694.1 135.713 1633.02 122.157C1457.64 83.2319 1282.32 158.042 1215.09 192.013C1158.8 220.453 1106.96 253.503 1056.83 285.464C1001.29 320.872 943.861 357.485 880.126 388.008C781.427 435.276 675.852 459.998 579.969 460.001Z"
+                        fill="#0096F9"></path>
+                    <path
+                        d="M895.723 411.999C698.199 412.005 528.352 318.715 416.496 247.46C396.841 234.94 376.939 221.943 357.693 209.373C242.337 134.036 123.055 56.1353 -31.3547 21.2799C-209.582 -18.9512 -416.359 7.02711 -558.123 87.4747L-561 85.3647C-491.361 45.8457 -404.275 18.6375 -309.155 6.68593C-214.046 -5.26713 -117.478 -1.13743 -29.916 18.6284C125.447 53.6993 245.092 131.835 360.796 207.4C380.033 219.963 399.923 232.954 419.561 245.463C534.494 318.676 710.912 415.281 915 408.89C1019.28 405.63 1125.74 376.328 1250.05 316.678C1283.64 300.565 1316.8 283.267 1348.88 266.539C1411.57 233.85 1476.39 200.05 1547.27 173.52C1619.64 146.432 1762.23 105.098 1904.09 132.696C1988.69 149.15 2059.65 187.897 2122.26 222.083L2242 287.473L2239.18 289.616L2119.44 224.226C2057.15 190.218 1986.56 151.67 1902.83 135.384C1762.55 108.095 1621.22 149.088 1549.45 175.95C1478.86 202.37 1414.18 236.103 1351.62 268.723C1319.51 285.469 1286.31 302.785 1252.66 318.93C1127.62 378.93 1020.39 408.407 915.213 411.696C908.692 411.899 902.188 411.999 895.723 411.999Z"
+                        fill="#75E2FF"></path>
+                </g>
             </svg>
+
+            <svg class="d-block d-lg-none" width="100%" height="370" viewBox="0 0 393 370" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.24">
+                    <path
+                        d="M1313.38 282.619C1235.54 282.619 1154.09 261.525 1071.11 219.857C1030.49 199.457 992.755 176.081 956.263 153.473C928.019 135.978 898.818 117.887 868.488 101.31C783.905 55.0794 705.055 30.3809 627.44 25.802C523.011 19.6319 424.809 50.1285 329.879 79.6128C248.676 104.835 164.706 130.915 75.3856 135.13C-60.965 141.591 -188.002 97.1122 -294.296 52.7771C-311.56 45.5764 -329.065 38.0892 -345.996 30.8487C-438.411 -8.67642 -533.97 -49.5454 -642.157 -66.5977C-765.654 -86.0683 -924.09 -65.7842 -987.966 10.6312L-991.805 9.29735C-926.873 -68.3746 -766.258 -89.0499 -641.118 -69.3279C-532.194 -52.1581 -436.311 -11.1503 -343.587 28.506C-326.664 35.742 -309.167 43.2252 -291.929 50.4162C-186.244 94.499 -60.0452 138.695 75.0717 132.328C163.562 128.151 247.149 102.188 327.986 77.0808C423.451 47.4281 522.148 16.779 627.84 23.0026C706.375 27.636 786.016 52.5484 871.306 99.1666C901.737 115.8 930.99 133.922 959.28 151.447C995.692 174.004 1033.35 197.329 1073.79 217.639C1159.2 260.53 1242.9 281.4 1322.4 279.712C1405.5 277.933 1503.62 243.037 1521.79 181.867L1526.07 182.397C1507.47 244.998 1407.33 280.706 1322.54 282.52C1319.5 282.586 1316.44 282.619 1313.38 282.619Z"
+                        fill="#05BAFF" />
+                    <path
+                        d="M-451.704 173.633C-475.551 173.633 -499.561 172.488 -523.608 169.973C-590.481 162.978 -654.213 145.757 -715.846 129.103C-727.014 126.087 -738.178 123.071 -749.346 120.115C-821.922 100.919 -899.963 83.4486 -979.051 85.5945C-1066.15 87.9624 -1142.2 116.769 -1172.8 158.984L-1176.75 157.793C-1145.47 114.641 -1067.94 85.1973 -979.238 82.7865C-899.359 80.6199 -820.731 98.1945 -747.694 117.516C-736.509 120.473 -725.341 123.491 -714.164 126.512C-652.761 143.102 -589.272 160.257 -522.909 167.198C-353.11 184.962 -183.974 133.736 -71.5345 93.66C-37.8513 81.656 -3.95483 68.8203 28.83 56.4075C131.344 17.5924 237.348 -22.5443 353.248 -43.64C536.57 -77.0081 743.559 -59.2307 906.928 3.91135C948.578 20.0098 988.063 39.0994 1026.24 57.5601C1053.91 70.9364 1082.52 84.7678 1111.7 97.3441C1196.12 133.709 1271.58 151.869 1342.38 152.864C1431.89 154.137 1515.44 123.467 1545.8 78.3237L1549.8 79.4405C1518.75 125.606 1433.33 156.89 1342.29 155.675C1270.62 154.667 1194.41 136.352 1109.29 99.6797C1080 87.062 1051.34 73.2074 1023.63 59.8079C985.534 41.3911 946.144 22.3454 904.688 6.32116C742.324 -56.4283 536.62 -74.0977 354.43 -40.9365C239.071 -19.9372 133.314 20.1062 31.0341 58.8309C-1.77258 71.2523 -35.694 84.0971 -69.4243 96.1193C-166.554 130.739 -305.824 173.63 -451.704 173.633Z"
+                        fill="#B5F6FF" />
+                    <path
+                        d="M-63.0309 370C-107.364 370.001 -149.605 364.72 -188.171 353.939C-291.936 324.931 -359.477 260.656 -411.854 201.605C-419.796 192.654 -427.632 183.612 -435.479 174.552C-480.969 122.049 -528.008 67.7583 -599.243 28.641C-717.472 -36.2815 -896.124 -49.1869 -1033.7 -2.74178L-1035.73 -5.2308C-896.609 -52.1962 -715.96 -39.1425 -596.418 26.5007C-524.587 65.9471 -477.352 120.461 -431.674 173.182C-423.834 182.233 -416.003 191.266 -408.075 200.211C-356.047 258.858 -289.034 322.68 -186.435 351.362C-65.9168 385.051 91.463 364.267 234.53 295.75C298.015 265.345 355.332 228.803 410.764 193.463C460.987 161.445 512.917 128.337 569.396 99.7987C637.184 65.5444 814.006 -9.8803 991.441 29.499C1053.19 43.2027 1106.32 69.4106 1157.7 94.7551L1164.31 98.0122C1220.07 125.479 1275.39 151.046 1339.02 162.056C1411.08 174.52 1484.02 163.643 1524.82 134.335L1528.06 136.212C1486.18 166.298 1411.54 177.513 1337.89 164.77C1273.49 153.627 1217.78 127.89 1161.67 100.246L1155.06 96.9877C1103.95 71.779 1051.1 45.7114 990.021 32.1555C814.637 -6.77004 639.317 68.0399 572.086 102.011C515.803 130.451 463.963 163.501 413.829 195.462C358.29 230.87 300.861 267.483 237.126 298.006C138.427 345.274 32.8522 369.996 -63.0309 370Z"
+                        fill="#0096F9" />
+                    <path
+                        d="M252.723 321.999C55.1991 322.005 -114.648 228.715 -226.504 157.46C-246.159 144.94 -266.061 131.943 -285.307 119.373C-400.663 44.0364 -519.945 -33.8647 -674.355 -68.7201C-852.582 -108.951 -1059.36 -82.9729 -1201.12 -2.52526L-1204 -4.63529C-1134.36 -44.1543 -1047.28 -71.3625 -952.155 -83.3141C-857.046 -95.2671 -760.478 -91.1374 -672.916 -71.3716C-517.553 -36.3007 -397.908 41.8351 -282.204 117.4C-262.967 129.963 -243.077 142.954 -223.439 155.463C-108.506 228.676 67.9125 325.281 272 318.89C376.276 315.63 482.739 286.328 607.053 226.678C640.635 210.565 673.803 193.267 705.882 176.539C768.567 143.85 833.388 110.05 904.266 83.5196C976.642 56.4316 1119.23 15.0982 1261.09 42.6955C1345.69 59.1502 1416.65 97.8971 1479.26 132.083L1599 197.473L1596.18 199.616L1476.44 134.226C1414.15 100.218 1343.56 61.67 1259.83 45.3839C1119.55 18.0949 978.221 59.0881 906.453 85.9501C835.865 112.37 771.18 146.103 708.622 178.723C676.51 195.469 643.307 212.785 609.658 228.93C484.617 288.93 377.391 318.407 272.213 321.696C265.692 321.899 259.188 321.999 252.723 321.999Z"
+                        fill="#75E2FF" />
+                </g>
+            </svg>
+
+
         </div>
         <div class="why-us-inner">
             <div class="why-us-bg-wave">
@@ -404,49 +520,83 @@
                             market knowledge with technology that actually works for you â€” not just for us.</p>
                     </div>
                 </div>
-                <div class="row g-3">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100">
-                            <div class="service-icon-wrap" style="background: rgba(46, 124, 246, 0.12);">
-                                <img src="images/icons/users-01.svg" alt="">
-                            </div>
-                            <div class="service-card-body">
-                                <h5 class="service-title">Local expertise</h5>
-                                <p class="service-desc">We live and work in Southern Ontario. We know the streets,
-                                    school zones, and hidden gems that listings don't show.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100">
-                            <div class="service-icon-wrap" style="background: rgba(233, 189, 95, 0.12);">
-                                <img src="images/icons/rocket-02.svg" alt="">
-                            </div>
-                            <div class="service-card-body">
-                                <h5 class="service-title">Proven results</h5>
-                                <p class="service-desc">Every recommendation is backed by real market data â€” so you
-                                    always know what a fair price looks like.</p>
+                <div class="swiper testimonial-swiper-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-icon-wrap" style="background: rgba(46, 124, 246, 0.12);">
+                                    <img src="images/icons/users-01.svg" alt="">
+                                </div>
+                                <div class="service-card-body">
+                                    <h5 class="service-title">Local expertise</h5>
+                                    <p class="service-desc">We live and work in Southern Ontario. We know the streets,
+                                        school zones, and hidden gems that listings don't show.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card h-100">
-                            <div class="service-icon-wrap" style="background: rgba(141, 235, 146, 0.12);">
-                                <img src="images/icons/check-circle-broken.svg" alt="">
-                            </div>
-                            <div class="service-card-body">
-                                <h5 class="service-title">Full support</h5>
-                                <p class="service-desc">Your agent is reachable when it matters â€” evenings, weekends,
-                                    and every step between offer and close.</p>
+                        <!-- second-slide-start -->
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-icon-wrap" style="background: rgba(233, 189, 95, 0.12);">
+                                    <img src="images/icons/rocket-02.svg" alt="">
+                                </div>
+                                <div class="service-card-body">
+                                    <h5 class="service-title">Proven results</h5>
+                                    <p class="service-desc">Every recommendation is backed by real market data â€” so
+                                        you
+                                        always know what a fair price looks like.</p>
+                                </div>
                             </div>
                         </div>
+                        <!-- third-slide-start -->
+                        <div class="swiper-slide">
+                            <div class="service-card h-100">
+                                <div class="service-icon-wrap" style="background: rgba(141, 235, 146, 0.12);">
+                                    <img src="images/icons/check-circle-broken.svg" alt="">
+                                </div>
+                                <div class="service-card-body">
+                                    <h5 class="service-title">Full support</h5>
+                                    <p class="service-desc">Your agent is reachable when it matters â€” evenings,
+                                        weekends,
+                                        and every step between offer and close.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
+
+
+                </div>
+                <div class="testimonial-controls-2">
+                    <button class="nav-btn-1 prev-btn-2" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                    <div class="custom-dots-2">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                    <button class="nav-btn-1 next-btn-2" type="button">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.75 12.75L6.75 6.75L0.75 0.75" stroke="#2C6EFE" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="shape">
+    <div class="shape-1">
         <img src="images/icons/section-shape-blue-bottom.svg" alt="">
     </div>
 
@@ -454,13 +604,13 @@
     <section class="cities-section">
         <div class="container">
             <div class="row align-items-end cities-header-row">
-                <div class="col">
+                <div class="col-lg-6">
                     <span class="section-badge">Where to Live</span>
                     <h2 class="section-title mb-0">Where Do You Want to Live?</h2>
                     <p class="section-desc cities-desc">Discover the neighbourhoods that feel like home â€” from vibrant
                         urban streets to peaceful family communities across Southern Ontario.</p>
                 </div>
-                <div class="col-auto">
+                <div class="col-lg-6  w-auto ms-auto">
                     <a href="#" class="btn btn-primary d-flex align-items-center gap-2">
                         View all <img src="images/icons/chevron-right-white.svg" alt="">
                     </a>
@@ -589,6 +739,9 @@
             <div class="row g-4 mb-4">
                 <div class="col-lg-5 col-md-6">
                     <div class="advantage-card advantage-card--img-right">
+                        <div class="advantage-card-img">
+                            <img src="images/neighborhoods.jpg" alt="Explore neighborhoods">
+                        </div>
                         <div class="advantage-card-content">
                             <div class="service-icon-wrap" style="background: rgba(233,189,95,0.12);">
                                 <img src="images/icons/search-lg.svg" alt="">
@@ -604,13 +757,14 @@
                             </div>
                         </div>
                         <div class="advantage-card-spacer"></div>
-                        <div class="advantage-card-img">
-                            <img src="images/neighborhoods.jpg" alt="Explore neighborhoods">
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6">
                     <div class="advantage-card advantage-card--img-right advantage-card--wide">
+                        <div class="advantage-card-img">
+                            <img src="images/equity.jpg" alt="Maximize value and equity">
+                        </div>
                         <div class="advantage-card-content">
                             <div class="service-icon-wrap" style="background: rgba(46,124,246,0.12);">
                                 <img src="images/icons/cursor-box.svg" alt="">
@@ -626,9 +780,7 @@
                             </div>
                         </div>
                         <div class="advantage-card-spacer"></div>
-                        <div class="advantage-card-img">
-                            <img src="images/equity.jpg" alt="Maximize value and equity">
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -638,6 +790,9 @@
                 <div class="col-lg-7 col-md-6">
                     <div
                         class="advantage-card advantage-card--img-right advantage-card--wide advantage-card--img-gradient">
+                        <div class="advantage-card-img">
+                            <img src="images/sell-upsize.jpg" alt="Sell and upsize">
+                        </div>
                         <div class="advantage-card-content">
                             <div class="service-icon-wrap" style="background: rgba(141,235,146,0.12);">
                                 <img src="images/icons/chart-breakout-circle.svg" alt="">
@@ -653,13 +808,14 @@
                             </div>
                         </div>
                         <div class="advantage-card-spacer"></div>
-                        <div class="advantage-card-img">
-                            <img src="images/sell-upsize.jpg" alt="Sell and upsize">
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6">
                     <div class="advantage-card advantage-card--img-right">
+                        <div class="advantage-card-img">
+                            <img src="images/market-timing.jpg" alt="Time the market">
+                        </div>
                         <div class="advantage-card-content">
                             <div class="service-icon-wrap" style="background: rgba(255,130,118,0.12);">
                                 <img src="images/icons/clock-stopwatch.svg" alt="">
@@ -675,9 +831,7 @@
                             </div>
                         </div>
                         <div class="advantage-card-spacer"></div>
-                        <div class="advantage-card-img">
-                            <img src="images/market-timing.jpg" alt="Time the market">
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -754,13 +908,19 @@
                                             <div class="agent-contact-pills">
                                                 <a href="mailto:sarah@homeoptima.ca" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     sarah@homeoptima.ca
                                                 </a>
                                                 <a href="tel:+11234567896" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     (123) 456-7896
                                                 </a>
@@ -797,13 +957,19 @@
                                             <div class="agent-contact-pills">
                                                 <a href="mailto:michael@homeoptima.ca" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     michael@homeoptima.ca
                                                 </a>
                                                 <a href="tel:+11234567897" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     (123) 456-7897
                                                 </a>
@@ -840,13 +1006,19 @@
                                             <div class="agent-contact-pills">
                                                 <a href="mailto:priya@homeoptima.ca" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     priya@homeoptima.ca
                                                 </a>
                                                 <a href="tel:+11234567898" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     (123) 456-7898
                                                 </a>
@@ -883,13 +1055,19 @@
                                             <div class="agent-contact-pills">
                                                 <a href="mailto:james@homeoptima.ca" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M10.498 12H4.998M4.913 12.29l-2.335 6.975c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.66 3.75c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     james@homeoptima.ca
                                                 </a>
                                                 <a href="tel:+11234567899" class="agent-pill">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M8.38 8.853a10.86 10.86 0 0 0 3.233 4.254 10.858 10.858 0 0 0 4.254 3.232c.125.06.187.09.266.113a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z"
+                                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     (123) 456-7899
                                                 </a>
@@ -907,7 +1085,7 @@
                                 <button class="slider-arrow" id="agentPrev" aria-label="Previous">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M15 18L9 12L15 6" stroke="#0E171F" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </button>
                                 <div class="agent-dots" id="agentPagination"></div>
@@ -963,16 +1141,15 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 text-center cta-content">
-                        <h2 class="cta-heading">Ready to make your<br>next move?</h2>
+                        <h2 class="cta-heading">Ready to make your next move?</h2>
                         <p class="cta-sub">Whether you're buying, selling, or just exploring â€” let's start the
                             conversation. No pressure, no obligations.</p>
                         <div class="cta-actions">
                             <a href="#" class="btn cta-btn">
-                                Book a Free Discovery Call
+                                Get a free home valuation
+                                <img src="images/icons/chevron-right.svg" alt="">
                             </a>
-                            <a href="#" class="btn cta-btn--secondary">
-                                Let's Connect
-                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -980,7 +1157,7 @@
         </div>
     </section>
 
-    <div class="shape">
+    <div class="shape style-2">
         <img src="images/icons/section-shape-blue-bottom.svg" alt="">
     </div>
 
@@ -1126,10 +1303,7 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
-
                         </div>
                         <div class="testimonial-controls">
                             <button class="nav-btn prev-btn" type="button">
@@ -1175,7 +1349,8 @@
                     <div class="col-lg-5">
                         <div class="app-text-col">
                             <h2 class="app-heading">Best home search app.</h2>
-                            <p class="app-desc">Search listings, scan flyers, and track your home's value â€” all from one
+                            <p class="app-desc">Search listings, scan flyers, and track your home's value â€” all from
+                                one
                                 app. Available on iOS and Android.</p>
                             <div class="app-store-badges">
                                 <a href="#"><img class="app-badge" src="images/appstore.png"
@@ -1226,11 +1401,11 @@
     </section>
 
     <!-- footer::start -->
-    <footer class="home-footer py-5">
+    <footer class="home-footer">
         <div class="container">
             <div class="row g-4">
                 <!-- Logo / About -->
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 footer-logo-col">
                     <a href="#" class="footer-logo d-inline-flex align-items-center justify-content-center">
                         Logo
                     </a>
@@ -1264,7 +1439,7 @@
                 </div>
 
                 <!-- Discover -->
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-6 footer-discover">
                     <h6 class="footer-title">Discover</h6>
                     <ul class="footer-links list-unstyled">
                         <li><a href="listing-details.html">Search Listings</a></li>
@@ -1275,7 +1450,7 @@
                 </div>
 
                 <!-- Home Owner -->
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-6 footer-homeowner">
                     <h6 class="footer-title">Home Owner</h6>
                     <ul class="footer-links list-unstyled">
                         <li><a href="home-value-hub-landing.html">Home Value Hub</a></li>
@@ -1286,7 +1461,7 @@
                 </div>
 
                 <!-- Company -->
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-6 footer-company">
                     <h6 class="footer-title">Company</h6>
                     <ul class="footer-links list-unstyled">
                         <li><a href="#">Blog</a></li>
@@ -1297,7 +1472,7 @@
                 </div>
 
                 <!-- Contact -->
-                <div class="col-lg-3 col-md-12">
+                <div class="col-lg-3 col-md-12 footer-contact ">
                     <h6 class="footer-title">Primary Contact</h6>
 
                     <div class="contact-box">
@@ -1338,12 +1513,12 @@
                         </a>
                     </div>
 
-                    <a href="#" class="btn-contact mt-3">Contact us <img class="" src="images/icons/chevron-right.svg"
+                    <a href="#" class="btn-contact">Contact us <img class="" src="images/icons/chevron-right.svg"
                             alt=""></a>
                 </div>
             </div>
 
-            <div class="footer-bottom mt-5 pt-4">
+            <div class="footer-bottom">
                 <div class="row align-items-center gy-3">
                     <div class="col-lg-4 text-center text-lg-start">
                         <p class="mb-0 small-text">Â© 2026 HomeOptima â€” All Right Reserved</p>

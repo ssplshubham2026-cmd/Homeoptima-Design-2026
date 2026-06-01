@@ -105,6 +105,8 @@
         }
     }
 
+
+
     .form-card {
         padding: 22px 18px;
 
@@ -218,7 +220,8 @@
 
         transform: rotate(10deg);
         left: -84px;
-        img{
+
+        img {
             width: 65%;
         }
 
@@ -340,7 +343,14 @@
     }
 }
 
-.testimonial-controls {
+.testimonial-controls-1,
+.testimonial-controls-2 {
+    display: none !important;
+}
+
+.testimonial-controls,
+.testimonial-controls-1,
+.testimonial-controls-2 {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -348,162 +358,28 @@
     margin-top: 28px;
 }
 
-.nav-btn {
-    width: 56px;
-    height: 56px;
-    border: 1px solid #929DAA3D;
-    border-radius: 50%;
-    background: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 24px 0px #0000000A;
-    transition: 0.3s ease;
 
-
-}
-
-.custom-dots {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: auto !important;
-}
-
-.swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin: 0 !important;
-    background: rgba(44, 110, 254, 0.24);
-}
-
-.swiper-pagination-bullet-active {
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
-    background: var(--primary-color);
-    margin: 0 !important;
-}
-
-.bootstrap-select {
-    width: 90px !important;
-    height: 48px !important;
-    box-shadow: 0px 2px 16px 0px rgba(17, 18, 57, 0.03);
-    border: 1px solid rgba(237, 237, 237, 1);
-    border-radius: 8px;
-
-    .btn {
-        &:hover {
-            background-color: #fff;
-            border: 1px solid rgba(237, 237, 237, 1);
+ .shape {
+        img {
+            width: 100%;
+            position: relative;
+            top: 1px;
         }
 
-        &:active {
-            background-color: #fff;
-            border: 1px solid rgba(237, 237, 237, 1);
+        &.style-2 {
+            img {
+                top: -2px
+            }
         }
-    }
-}
-
-@include respond ('laptop') {
-    .testimonial-section .testimonial-left-content h2 {
-
-        font-size: 60px;
-    }
-}
-
-@include respond('tab-land') {
-    .testimonial-section .testimonial-left-content h2 {
-
-        font-size: 50px;
-    }
-
-    .banner-section .form-card .valuation-btn {
-        padding: 12px 93px !important;
-    }
-
-    .main-header .nav-link {
-        padding: 12px 18px !important;
-    }
-}
-
-@include respond ('tab-port') {
-    .testimonial-section .testimonial-left-content h2 {
-
-        font-size: 34px;
-    }
-
-    .banner-section {
-        padding: 40px 0;
-    }
-
-    .banner-section h1,
-    .banner-section .h1 {
-        font-size: 38px;
-        line-height: 48px;
-        margin-bottom: 16px;
 
     }
 
-    .banner-section .badge-banner {
-        margin-bottom: 16px;
-    }
+    .shape-1 {
+        img {
 
-    .banner-section p {
-        font-size: 18px;
-
-    }
-
-    .banner-section .info-card .review-box {
-        padding: 10px;
-    }
-
-    .banner-section .info-card .house-image img {
-        height: 172px;
-    }
-
-    .banner-section .info-card .review-box .review-content h4 {
-        font-size: 14px;
-    }
-
-    .banner-section .info-card .review-box .review-content .stars small {
-        font-size: 13px;
-    }
-
-    .banner-section .info-card {
-        margin-bottom: 16px;
-    }
-
-    .banner-section .info-card .house-image {
-        margin-bottom: 16px;
-    }
-
-    .banner-section .banner-content {
-        margin-bottom: 40px;
-    }
-
-    .banner-section .info-card,
-    .banner-section .form-card {
-        padding: 16px;
-    }
-
-    .banner-section .form-card .valuation-btn {
-        padding: 12px 18px !important;
-    }
-
-    .shape img {
-        width: 100%;
-        position: relative;
-        top: -2px;
+            width: 100%;
+            position: relative;
+            top: -2px;
+        }
 
     }
-
-    .testimonial-section {
-        padding: 40px 0;
-    }
-
-    .testimonial-controls {
-        justify-content: center;
-    }
-}

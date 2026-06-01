@@ -16,6 +16,7 @@
     background-size: cover;
     background-position: center;
 
+
     .hero-bg-overlay {
         position: absolute;
         inset: 0;
@@ -85,7 +86,8 @@
         }
 
         @include respond("tab-port") {
-            font-size: 38px;
+            font-size: 44px;
+            line-height: 56px;
         }
     }
 
@@ -237,7 +239,7 @@
 .listings-section {
     position: relative;
     padding: 80px 0;
-    background: $white;
+    background: #FBFDFF;
     overflow: hidden;
 
     .listings-header-row {
@@ -525,9 +527,12 @@
         flex-direction: column;
         justify-content: flex-end;
         gap: 10px;
-        background: linear-gradient(to top, #0E171F 0%, rgba(#0E171F, 0) 60%);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
+        background: linear-gradient(
+        360deg,
+        #0E171F 0%,
+        rgba(14, 23, 31, 0) 100%
+    );
+       
     }
 
     .city-card-name {
@@ -739,6 +744,16 @@
 
         @include respond("tab-land") {
             height: 440px;
+        }
+         @include respond("tab-port") {
+           
+            width:361px;
+            height:334px;
+            img{
+
+                  object-position: center;
+            }
+          
         }
     }
 
@@ -1100,7 +1115,7 @@
     .app-phone-col {
         position: absolute;
         right: 80px;
-        top: 0;
+        top: 64px;
         bottom: 0;
         width: 648px;
         display: flex;
@@ -1139,7 +1154,7 @@
     .app-review-overlay {
         position: absolute;
         left: 0;
-        top: 319px;
+        top: 230px;
         width: 308px;
         background: rgba(69, 53, 18, 0.8);
         backdrop-filter: blur(6px);
@@ -1147,6 +1162,7 @@
         border-radius: $radius-lg;
         padding: 16px;
         box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
     }
 
     .app-review-stars {
@@ -1168,3 +1184,9 @@
         max-width: none;
     }
 }
+
+.swiper-slide {
+    height: -webkit-fill-available;
+}
+
+

@@ -1,0 +1,499 @@
+// responsive start
+
+@include respond('laptop') {
+    .testimonial-section {
+        .testimonial-left-content h2 {
+            font-size: 60px;
+        }
+    }
+}
+
+@include respond('tab-land') {
+    .main-header {
+        .nav-link {
+            padding: 12px 18px !important;
+        }
+    }
+
+    .testimonial-section {
+        .testimonial-left-content h2 {
+            font-size: 50px;
+        }
+    }
+
+    .banner-section {
+        .form-card .valuation-btn {
+            padding: 12px 93px !important;
+        }
+    }
+}
+
+@include respond('tab-port') {
+    .footer-logo-col {
+        order: 1;
+    }
+
+    .footer-contact {
+        order: 2;
+    }
+
+    .footer-discover {
+        order: 3;
+        margin-top:40px;
+        margin-bottom:40px;
+    }
+
+    .footer-homeowner {
+        order: 4;
+         margin-top:0px;
+          margin-bottom:40px;
+    }
+
+    .footer-company {
+        order: 5;
+          margin-top:0px;
+        //   margin-bottom:40px;
+    }
+
+    .home-footer {
+        .contact-box {
+            width: 100%;
+        }
+
+        .btn-contact {
+            width: 100%;
+        }
+    }
+
+    .home-footer{
+        .footer-bottom{
+
+            padding-top: 24px;
+            margin-top: 24px;
+        }
+
+    } 
+
+    .main-header {
+        .navicon {
+            span {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                border-radius: 1px;
+                opacity: 1;
+                background-color: #000;
+                right: 22px;
+                transform: rotate(0deg);
+                transition: 0.25s ease-in-out;
+
+                &:nth-child(1) {
+                    top: 25px;
+                    width: 32px;
+                }
+
+                &:nth-child(2) {
+                    top: 35px;
+                    width: 32px;
+                }
+
+                &:nth-child(3) {
+                    top: 45px;
+                    width: 32px;
+                }
+            }
+
+            &.open {
+                span {
+                    &:nth-child(1) {
+                        top: 23px;
+                        transform: rotate(135deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                        left: -60px;
+                    }
+
+                    &:nth-child(3) {
+                        top: 23px;
+                        width: 32px;
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+        }
+
+        // dono .navbar-collapse rules ko merge kiya gaya hai
+        .navbar-collapse {
+            background: linear-gradient(0deg, rgba(0, 28, 88, 0.93) 0%, rgba(0, 28, 88, 0.93) 100%), rgba(230, 240, 255, 0.40);
+            backdrop-filter: blur(6px);
+            margin-top: 12px;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding: 40px 24px;
+        }
+
+        .nav-link {
+            padding: 0 !important;
+            color: var(--white);
+            padding-bottom: 32px !important;
+            font-size: 28px;
+            font-weight: 400;
+            font-family: Archivo;
+            line-height: 32px;
+
+            &.active {
+                color: var(--white);
+            }
+        }
+
+        .navbar-nav-scroll {
+            min-height: 300px;
+        }
+
+        .extra-nav {
+            margin-top: 56px;
+
+            .btn {
+                display: block;
+                width: 100%;
+                color: var(--white);
+                border: 1px solid rgba(255, 255, 255, 0.20);
+                padding: 12px 24px !important;
+
+                &:first-child {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .listings-section {
+        .section-desc {
+            margin-bottom: 24px;
+        }
+    }
+
+    .btn {
+        padding: 10px 16px !important;
+    }
+
+    .testimonial-section {
+        .testimonial-left-content {
+            h2 {
+                font-size: 34px;
+                line-height: 44px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 24px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .testimonial-card {
+            padding: 16px;
+
+            .testimonial-card-body p {
+                font-size: 18px;
+                line-height: 32px;
+            }
+
+            .testimonial-card-header {
+                margin-bottom: 16px;
+            }
+
+            .testimonial-card-footer {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    .testimonial-controls {
+        margin-top: 24px;
+    }
+
+    .stats-bar {
+        padding: 24px 0;
+
+        .stat-number {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+    }
+
+    .what-we-do-section,
+    .listings-section,
+    .why-us-section .why-us-inner,
+    .cities-section,
+    .advantage-section,
+    .agent-section .agent-section-inner,
+    .testimonial-section,
+    .app-section {
+        padding: 40px 0;
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+    }
+
+    .listings-section .listings-header-row,
+    .why-us-section .why-us-header-row {
+        margin-bottom: 40px;
+    }
+
+    .advantage-section {
+        .advantage-card--img-right .advantage-card-img {
+            position: relative;
+            width: 373px;
+            left: -27px;
+            top: -27px;
+            height: 169px;
+        }
+
+        .advantage-title {
+            font-size: 20px;
+            margin-top: 24px;
+        }
+
+        .advantage-card {
+            gap: 0;
+            padding: 16px;
+        }
+
+        .advantage-card-bottom {
+            gap: 16px;
+        }
+    }
+
+    .service-icon-wrap {
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    .agent-section .agent-cta-row .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-section .cta-inner {
+        padding: 120px 16px;
+    }
+
+    .testimonial-controls,
+    .testimonial-controls-1,
+    .testimonial-controls-2 {
+        justify-content: space-between;
+    }
+
+    .testimonial-controls-1,
+    .testimonial-controls-2 {
+        display: flex !important;
+    }
+}
+
+.nav-btn,
+.nav-btn-1,
+.nav-btn-2 {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #929DAA3D;
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 24px 0px #0000000A;
+    transition: 0.3s ease;
+}
+
+// teeno repeated .custom-dots groups ko ek block me merge kiya gaya hai
+.custom-dots,
+.custom-dots-1,
+.custom-dots-2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto !important;
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin: 0 !important;
+        background: rgba(44, 110, 254, 0.24);
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: var(--primary-color);
+        margin: 0 !important;
+    }
+}
+
+.custom-dots-2 {
+    .swiper-pagination-bullet {
+        background: #FFFFFF3D;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--white);
+    }
+
+    // NOTE: original CSS me neeche ka saara banner/testimonial code .custom-dots-2
+    // ke ANDAR nested tha (sambhavtah ek missing closing brace ki wajah se).
+    // Behaviour bilkul same rakhne ke liye yahan bhi waise hi nested rakha gaya hai.
+    // Agar ye galti thi, to is poore block ko upar nikaal kar kisi media-query
+    // (jaise phone-port) me daal dena chahiye.
+    .testimonial-section {
+        padding: 40px 0;
+
+        .testimonial-left-content h2 {
+            font-size: 34px;
+        }
+    }
+
+    .banner-section {
+        padding: 40px 0;
+
+        h1,
+        .h1 {
+            font-size: 38px;
+            line-height: 48px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .badge-banner {
+            margin-bottom: 16px;
+        }
+
+        .banner-content {
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            margin-bottom: 16px;
+            padding: 16px;
+
+            .review-box {
+                padding: 10px;
+
+                .review-content {
+                    h4 {
+                        font-size: 14px;
+                    }
+
+                    .stars small {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .house-image {
+                margin-bottom: 16px;
+
+                img {
+                    height: 172px;
+                }
+            }
+        }
+
+        .form-card {
+            padding: 16px;
+
+            .valuation-btn {
+                padding: 12px 18px !important;
+            }
+        }
+    }
+
+    .testimonial-controls {
+        justify-content: center;
+    }
+}
+
+.bootstrap-select {
+    width: 90px !important;
+    height: 48px !important;
+    box-shadow: 0px 2px 16px 0px rgba(17, 18, 57, 0.03);
+    border: 1px solid rgba(237, 237, 237, 1);
+    border-radius: 8px;
+
+    .btn {
+        &:hover {
+            background-color: #fff;
+            border: 1px solid rgba(237, 237, 237, 1);
+        }
+
+        &:active {
+            background-color: #fff;
+            border: 1px solid rgba(237, 237, 237, 1);
+        }
+    }
+}
+
+@include respond("phone-land") {
+    .hero-section {
+        min-height: auto;
+
+        .hero-inner {
+            padding: 24px 0;
+        }
+
+        .hero-sub {
+            font-size: 16px;
+        }
+
+        .hero-text-group {
+            gap: 16px;
+        }
+
+        .hero-search-wrap {
+            display: block;
+
+            .hero-search-input {
+                margin-bottom: 16px;
+                padding: 16px 21px;
+
+                input {
+                    font-size: 13px;
+                }
+
+                .hero-search-icon {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .hero-search-btn {
+            justify-content: center;
+        }
+    }
+
+    .cities-section .cities-swiper-fade {
+        display: none;
+    }
+}
