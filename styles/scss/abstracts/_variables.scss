@@ -12,6 +12,13 @@ $radius-sm:      4px;
 $text-muted:     #2E2E2ECC;
 $light-color:    #F2F6FF;
 
+
+// ===== Chart-specific tokens (not brand colors, kept local) =====
+$chart-green:       #22B14C;
+$chart-green-fill:  rgba(34, 177, 76, 0.22);
+$chart-red:         #FF3B30;
+$grid-line:         rgba(14, 23, 31, 0.08);
+$card-shadow:       0 20px 45px rgba(14, 23, 31, 0.10);
 // ── CSS Custom Properties ────────────────────────────────────────────────────
 :root {
     --primary-color:   #{$primary};

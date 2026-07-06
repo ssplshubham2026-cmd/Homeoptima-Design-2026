@@ -783,4 +783,195 @@
 
   // Schools bar chart is initialised on-demand in custom.js
   // (only renders after a school row is selected)
+
+
+
+
+
+  
+})();
+
+
+
+(function(){
+  // ---- Data: approximate GTA average home price by year (2000-2024) ----
+  const data = [
+    {year: 1999, price: 65000},
+    {year: 2000, price: 92000},
+    {year: 2002, price: 120000},
+    {year: 2004, price: 150000},
+    {year: 2006, price: 165000},
+    {year: 2008, price: 175000},
+    {year: 2010, price: 195000},
+    {year: 2012, price: 165000},
+    {year: 2013, price: 210000},
+    {year: 2015, price: 280000},
+    {year: 2017, price: 380000},
+    {year: 2019, price: 700000},
+    {year: 2020, price: 640000},
+    {year: 2021, price: 620000},
+    {year: 2022, price: 780000},
+    {year: 2023, price: 950000},
+    {year: 2024, price: 1750000}, // market peak
+    {year: 2025, price: 1300000}, // today's market
+    {year: 2025.4, price: 950000} // trendline endpoint reference
+  ];
+ 
+  // Chart layout constants
+  const W = 900, H = 480;
+  const margin = {top: 30, right: 40, bottom: 46, left: 60};
+  const plotW = W - margin.left - margin.right;
+  const plotH = H - margin.top - margin.bottom;
+ 
+  const xMin = 1999, xMax = 2025.4;
+  const yMin = 0, yMax = 1800000;
+ 
+  function xScale(year){
+    return margin.left + ( (year - xMin) / (xMax - xMin) ) * plotW;
+  }
+  function yScale(price){
+    return margin.top + plotH - ( (price - yMin) / (yMax - yMin) ) * plotH;
+  }
+ 
+  const svg = document.getElementById('chart');
+  const ns = "http://www.w3.org/2000/svg";
+ 
+  function el(tag, attrs){
+    const e = document.createElementNS(ns, tag);
+    for(const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+ 
+  // Defs: arrowhead marker + gradient for area fill
+  const defs = el('defs', {});
+  const marker = el('marker', {id:'arrowhead', markerWidth:'8', markerHeight:'8', refX:'6', refY:'3', orient:'auto'});
+  marker.appendChild(el('path', {d:'M0,0 L6,3 L0,6 Z', fill:'#2b3550'}));
+  defs.appendChild(marker);
+ 
+  const grad = el('linearGradient', {id:'areaGrad', x1:'0', y1:'0', x2:'0', y2:'1'});
+  grad.appendChild(el('stop', {offset:'0%', 'stop-color':'#22b14c', 'stop-opacity':'0.22'}));
+  grad.appendChild(el('stop', {offset:'100%', 'stop-color':'#22b14c', 'stop-opacity':'0'}));
+  defs.appendChild(grad);
+  svg.appendChild(defs);
+ 
+  // ---- Gridlines & Y axis labels ----
+  const yTicks = [0, 200000, 600000, 1000000, 1400000, 1800000];
+  yTicks.forEach(v => {
+    const y = yScale(v);
+    svg.appendChild(el('line', {
+      class:'gridline', x1:margin.left, x2:W - margin.right, y1:y, y2:y
+    }));
+    const label = document.createElementNS(ns,'text');
+    label.setAttribute('class','axis-label');
+    label.setAttribute('x', margin.left - 12);
+    label.setAttribute('y', y + 4);
+    label.setAttribute('text-anchor','end');
+    label.textContent = v === 0 ? '0' : (v >= 1000000 ? (v/1000000) + '.0M'.replace('.0M', (v%1000000===0?'.0M':'M')) : (v/1000)+'K');
+    svg.appendChild(label);
+  });
+  // fix label text explicitly (avoid odd formatting above)
+  const yLabels = ['0','200K','600K','1.0M','1.4M','1.8M'];
+  Array.from(svg.querySelectorAll('.axis-label')).forEach((t,i)=>{ t.textContent = yLabels[i]; });
+ 
+  // ---- X axis labels ----
+  const xTicks = [2000, 2005, 2010, 2015, 2020, 2024];
+  xTicks.forEach(yr => {
+    const x = xScale(yr);
+    svg.appendChild(el('line', {
+      class:'gridline', x1:x, x2:x, y1:margin.top, y2:margin.top+plotH
+    }));
+    const label = document.createElementNS(ns,'text');
+    label.setAttribute('class','axis-label');
+    label.setAttribute('x', x);
+    label.setAttribute('y', margin.top + plotH + 24);
+    label.setAttribute('text-anchor','middle');
+    label.textContent = yr;
+    svg.appendChild(label);
+  });
+ 
+  // baseline axis
+  svg.appendChild(el('line', {
+    x1:margin.left, x2:W-margin.right, y1:margin.top+plotH, y2:margin.top+plotH,
+    stroke:'#d8dce6', 'stroke-width':1
+  }));
+ 
+  // ---- Green price line + area ----
+  const linePoints = data.map(d => `${xScale(d.year)},${yScale(d.price)}`).join(' ');
+  const areaPoints = `${xScale(data[0].year)},${margin.top+plotH} ` + linePoints + ` ${xScale(data[data.length-1].year)},${margin.top+plotH}`;
+ 
+  svg.appendChild(el('polygon', {points: areaPoints, fill:'url(#areaGrad)'}));
+  svg.appendChild(el('polyline', {
+    points: linePoints, fill:'none', stroke:'var(--green-line)',
+    'stroke-width':3, 'stroke-linejoin':'round', 'stroke-linecap':'round'
+  }));
+  // give explicit stroke color since CSS var may not resolve in some contexts
+  svg.querySelector('polyline').setAttribute('stroke', '#22b14c');
+ 
+  // ---- Blue dashed trendline (linear from first to last point) ----
+  const trendStart = {year: 1999, price: 20000};
+  const trendEnd = {year: 2025.4, price: 940000};
+  svg.appendChild(el('line', {
+    x1:xScale(trendStart.year), y1:yScale(trendStart.price),
+    x2:xScale(trendEnd.year), y2:yScale(trendEnd.price),
+    stroke:'#3355ee', 'stroke-width':3, 'stroke-dasharray':'2 7', 'stroke-linecap':'round'
+  }));
+ 
+  // ---- Peak & Today dots ----
+  const peak = data.find(d => d.year === 2024);
+  const today = data.find(d => d.year === 2025);
+ 
+  [peak, today].forEach(d => {
+    svg.appendChild(el('circle', {class:'dot-ring', cx:xScale(d.year), cy:yScale(d.price), r:9}));
+    svg.appendChild(el('circle', {class:'dot', cx:xScale(d.year), cy:yScale(d.price), r:5}));
+  });
+ 
+  // ---- Annotation: Market Peak ----
+  function textEl(x, y, str, anchor){
+    const t = document.createElementNS(ns,'text');
+    t.setAttribute('class','annotation-text');
+    t.setAttribute('x', x); t.setAttribute('y', y);
+    t.setAttribute('text-anchor', anchor || 'start');
+    t.textContent = str;
+    return t;
+  }
+ 
+  svg.appendChild(textEl(xScale(2018.6), yScale(peak.price) + 4, 'Market Peak', 'end'));
+  svg.appendChild(el('path', {
+    class:'annotation-arrow',
+    d:`M${xScale(2018.7)},${yScale(peak.price)} L${xScale(2023.7)},${yScale(peak.price)}`
+  }));
+ 
+  svg.appendChild(textEl(xScale(2017.6), yScale(today.price) - 22, "Today's Market", 'end'));
+  svg.appendChild(el('path', {
+    class:'annotation-arrow',
+    d:`M${xScale(2017.7)},${yScale(today.price)-18} L${xScale(2025.15)},${yScale(today.price)-2}`
+  }));
+ 
+  const trendMidYear = 2021.5;
+  const trendMidPrice = trendStart.price + (trendEnd.price-trendStart.price) * ((trendMidYear-trendStart.year)/(trendEnd.year-trendStart.year));
+  svg.appendChild(textEl(xScale(2016.6), yScale(trendMidPrice) - 55, '20-Yr Trendline', 'end'));
+  svg.appendChild(el('path', {
+    class:'annotation-arrow',
+    d:`M${xScale(2016.7)},${yScale(trendMidPrice)-50} L${xScale(2021.6)},${yScale(trendMidPrice)-4}`
+  }));
+ 
+  // ---- Red double arrow between today's price and trend value at same year ----
+  const trendAtToday = trendStart.price + (trendEnd.price-trendStart.price) * ((today.year-trendStart.year)/(trendEnd.year-trendStart.year));
+  const rx = xScale(today.year) + 22;
+  svg.appendChild(el('line', {
+    x1:rx, x2:rx, y1:yScale(today.price), y2:yScale(trendAtToday),
+    stroke:'#ff3b30', 'stroke-width':2
+  }));
+  svg.appendChild(el('path', { d:`M${rx-4},${yScale(today.price)+6} L${rx},${yScale(today.price)} L${rx+4},${yScale(today.price)+6}`, fill:'none', stroke:'#ff3b30','stroke-width':2 }));
+  svg.appendChild(el('path', { d:`M${rx-4},${yScale(trendAtToday)-6} L${rx},${yScale(trendAtToday)} L${rx+4},${yScale(trendAtToday)-6}`, fill:'none', stroke:'#ff3b30','stroke-width':2 }));
+ 
+  // On mobile, default the horizontal scroll to the recent years
+  const scrollContainer = document.querySelector('.chart-scroll');
+  function scrollToRecentOnMobile(){
+    if(window.innerWidth <= 560 && scrollContainer){
+      scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+    }
+  }
+  requestAnimationFrame(scrollToRecentOnMobile);
+
 })();
