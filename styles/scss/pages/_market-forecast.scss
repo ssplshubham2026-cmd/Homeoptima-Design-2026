@@ -121,13 +121,13 @@
   }
 
   .dot {
-    fill: $chart-green;
+    fill: $success-green;
     stroke: $white;
     stroke-width: 2;
 
     &-ring {
       fill: none;
-      stroke: $chart-green;
+      stroke: $success-green;
       stroke-width: 1.5;
       opacity: 0.5;
     }
